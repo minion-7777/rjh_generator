@@ -11,7 +11,7 @@ if(process.env.HF_CREDENTIALS?.trim()){
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors({origin: ''}));
+app.use(cors({origin: 'http://localhost:5173'}));
 app.use(express.json());
 
 app.use('/api/generations', generationRouter);
